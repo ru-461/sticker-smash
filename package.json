@@ -13,6 +13,7 @@
     "format:fix": "prettier --write './src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "@expo/webpack-config": "^19.0.0",
     "@types/react": "~18.2.14",
     "expo": "~49.0.15",
