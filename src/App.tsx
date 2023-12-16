@@ -13,7 +13,7 @@ const PlaceholderImage = require('../assets/images/background-image.png');
 export default function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const pictureImageAsync = async () => {
+  const pickImageAsync = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
       quality: 1,
@@ -36,7 +36,7 @@ export default function App() {
       <View style={styles.footerContainer}>
         <Button
           label="Choose a photo"
-          onPress={pictureImageAsync}
+          onPress={pickImageAsync}
           theme="primary"
         />
         <Button label="Use this photo" />
