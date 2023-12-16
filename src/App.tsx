@@ -28,9 +28,12 @@ export default function App() {
   const [pickedEmoji, setPickedEmoji] = useState(null);
   const [status, requestPermission] = MediaLibrary.usePermissions();
 
+  console.log(selectedImage);
+
   if (status === null) {
     requestPermission();
   }
+
   const onReset = () => {
     setShowAppOptions(false);
   };
@@ -90,6 +93,7 @@ export default function App() {
       alert('You did not select any image.');
     }
   };
+
   return (
     <GestureHandlerRootView style={styles.container}>
       <View style={styles.imageContainer}>
@@ -123,7 +127,10 @@ export default function App() {
               onPress={pickImageAsync}
               theme="primary"
             />
-            <Button label="Use this photo" />
+            <Button
+              label="Use this photo"
+              onPress={() => setShowAppOptions(true)}
+            />
           </View>
         </View>
       )}
