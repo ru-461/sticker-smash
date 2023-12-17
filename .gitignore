@@ -16,6 +16,9 @@ web-build/
 *.key
 *.mobileprovision
 
+# Bundled
+index.android.bundle
+
 # Metro
 .metro-health-check*
 
