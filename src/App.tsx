@@ -28,8 +28,6 @@ export default function App() {
   const [pickedEmoji, setPickedEmoji] = useState(null);
   const [status, requestPermission] = MediaLibrary.usePermissions();
 
-  console.log(selectedImage);
-
   if (status === null) {
     requestPermission();
   }
